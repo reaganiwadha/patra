@@ -4,6 +4,7 @@
   "description": "Yet another argument parser",
   "main": "dist/index.js",
   "scripts": {
+    "build" : "tsc",
     "test": "mocha tests"
   },
   "repository": {
