@@ -13,13 +13,13 @@ type PatraOptions = {
  */
 
 export function parse (args : string[], availableArgs : string[], patraOptions? : PatraOptions) : Object {
-    const res = {'_' : ''}
+    const res = { _: '' }
     let curr = '_'
 
-    //TODO remove this janky if else 
+    // TODO remove this janky if else
 
-    if(patraOptions){
-        if(patraOptions.prefix){
+    if (patraOptions) {
+        if (patraOptions.prefix) {
             args.forEach(e => {
                 if (availableArgs.indexOf(e.substring(patraOptions.prefix.length)) !== -1) {
                     curr = e.substring(patraOptions.prefix.length)
@@ -29,7 +29,7 @@ export function parse (args : string[], availableArgs : string[], patraOptions? 
                 }
             })
         }
-    }else{
+    } else {
         args.forEach(e => {
             if (availableArgs.indexOf(e) !== -1) {
                 curr = e

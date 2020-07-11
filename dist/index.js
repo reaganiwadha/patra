@@ -3,12 +3,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.parse = void 0;
 /**
  * Parses a string of argument or an array
- * @param args string[] - Array of arguments
+ * @param args string[] - Input arguments
+ * @param availableArgs string[] - Available arguments
+ * @param patraOptions PatraOptions
  * @returns object
  */
 function parse(args, availableArgs, patraOptions) {
     var res = { '_': '' };
     var curr = '_';
+    //TODO remove this janky if else 
     if (patraOptions) {
         if (patraOptions.prefix) {
             args.forEach(function (e) {

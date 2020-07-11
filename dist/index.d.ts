@@ -5,7 +5,9 @@ declare type PatraOptions = {
 };
 /**
  * Parses a string of argument or an array
- * @param args string[] - Array of arguments
+ * @param args string[] - Input arguments
+ * @param availableArgs string[] - Available arguments
+ * @param patraOptions PatraOptions
  * @returns object
  */
 export declare function parse(args: string[], availableArgs: string[], patraOptions?: PatraOptions): Object;
